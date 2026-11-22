@@ -4,44 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Login - Astronauta</title>
+
+    <link rel="stylesheet" href="./tailwind.css">
 </head>
 
-<body>
-    <div class="main">
-        <div class="left-login">
-            <h1> Faça login e<br>entre
-                para o nosso time</h1>
+<body class="min-h-screen min-h-dvh flex items-center justify-center bg-[#33fd90] p-4 sm:p-6">
 
-            <img src="Astronaut-bro.svg" alt="Astronauta" width="200px">
-        </div>
+    <main class="w-full max-w-[1100px] min-h-[550px] flex flex-col md:flex-row items-center justify-center gap-10 md:gap-8 rounded-2xl bg-[#170d22] p-6 sm:p-8 md:p-12 shadow-2xl">
 
-        <div class="right-login">
-            <div class="card">
+        <!-- Lado esquerdo -->
+        <section class="w-full md:w-[55%] flex flex-col items-center justify-center text-center">
 
-                <h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-[#33fd90]">
+                Faça login e<br>
+                entre para o nosso time
+            </h1>
+
+            <img
+                src="Astronaut-bro.svg"
+                alt="Ilustração de um astronauta"
+                class="w-full max-w-[350px] mt-6"
+            >
+
+        </section>
+
+        <!-- Lado direito -->
+        <section class="w-full md:w-[45%] flex items-center justify-center">
+
+            <div class="w-full max-w-[380px] rounded-2xl bg-[#2c2142] p-6 sm:p-8 shadow-xl">
+
+                <h2 class="text-2xl font-bold text-center text-[#33fd90] mb-8">
                     LOGIN
-                </h1>
-                <form action="#">
-                    <div class="input-box">
-                        <label for="user">Usuário</label>
-                        <input type="text" id="user" placeholder="Usuário" required>
+                </h2>
+
+                <form action="#" class="flex flex-col gap-6">
+
+                    <!-- Usuário -->
+                    <div class="flex flex-col gap-2">
+
+                        <label for="user" class="text-sm font-semibold text-white">
+                            Usuário
+                        </label>
+
+                        <input
+                            type="text"
+                            id="user"
+                            placeholder="Digite seu usuário"
+                            required
+                            class="w-full h-12 rounded-lg bg-[#170d22] px-4 text-white placeholder:text-gray-400 outline-none border border-transparent focus:border-[#33fd90] focus:ring-2 focus:ring-[#33fd90]/30 transition"
+                        >
+
                     </div>
 
-                    <div class="input-box">
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" placeholder="Senha" required>
+                    <!-- Senha -->
+                    <div class="flex flex-col gap-2">
+
+                        <label for="senha" class="text-sm font-semibold text-white">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Digite sua senha"
+                            required
+                            class="w-full h-12 rounded-lg bg-[#170d22] px-4 text-white placeholder:text-gray-400 outline-none border border-transparent focus:border-[#33fd90] focus:ring-2 focus:ring-[#33fd90]/30 transition"
+                        >
+
                     </div>
 
-                    <button>
-                        Login
+                    <!-- Botão -->
+                    <button
+                        type="submit"
+                        class="w-full h-12 rounded-lg bg-[#33fd90] font-bold text-[#170d22] hover:bg-[#24d979] active:scale-[0.98] transition cursor-pointer"
+                    >
+                        Entrar
                     </button>
+
                 </form>
+
             </div>
 
-        </div>
-    </div>
+        </section>
+
+    </main>
+
 </body>
 
 </html>
